@@ -6,5 +6,6 @@
 
 module.exports = {
   siteName: 'Paul\'s website',
-  plugins: []
+  plugins: [],
+  siteUrl: 'https://paul-louyot.github.io',
 }
