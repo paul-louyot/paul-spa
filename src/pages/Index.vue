@@ -3,7 +3,7 @@
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <div>
-      <g-image alt="Example image" src="~/mypicture.png" width="135" />
+      <g-image class="my-picture" alt="Example image" src="~/mypicture.png" width="135" />
     </div>
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
@@ -37,4 +37,8 @@ export default {
   background-color: #F1F1F1;
 }
 
+.my-picture {
+  margin: 0 auto 0;
+  display: block;
+}
 </style>
