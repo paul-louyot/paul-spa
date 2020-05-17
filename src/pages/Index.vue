@@ -6,6 +6,14 @@
     <a href="/projects">
       Browse my projects
     </a>
+    </br>
+    <a href="/check-this-out">
+      Check this out
+    </a>
+    </br>
+    <a href="/donate">
+      Donate
+    </a>
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Built with Gridsome</a>
       <!-- <a href="https://github.com/paul-louyot/paul-louyot.github.io" target="_blank" rel="noopener">Repo</a> -->
