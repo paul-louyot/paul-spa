@@ -3,10 +3,10 @@
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <div>
-      <g-image class="my-picture" alt="Example image" src="~/mypicture.png" width="135" />
+      <g-image class="my-picture" alt="Example image" src="~/mypicture.png" width="200" />
     </div>
     <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
+      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Built with Gridsome</a>
       <a href="https://github.com/paul-louyot/paul-louyot.github.io" target="_blank" rel="noopener">GitHub</a>
     </p>
 
