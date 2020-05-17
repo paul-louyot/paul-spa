@@ -1,13 +1,15 @@
 <template>
   <Layout>
     <h1>Life abroad</h1>
-      <a
-        href="https://www.google.com/maps/d/drive?state=%7B%22ids%22%3A%5B%221QwbJLPZxJFHC6lun0ZkGH7dgzHdnGT3m%22%5D%2C%22action%22%3A%22open%22%2C%22userId%22%3A%22116070659054577666496%22%7D&usp=sharing"
-        target="_blank"
-        rel="noopener"
-      >
-        Explorer en détail
-      </a>
+      <p>
+        <a
+          href="https://www.google.com/maps/d/drive?state=%7B%22ids%22%3A%5B%221QwbJLPZxJFHC6lun0ZkGH7dgzHdnGT3m%22%5D%2C%22action%22%3A%22open%22%2C%22userId%22%3A%22116070659054577666496%22%7D&usp=sharing"
+          target="_blank"
+          rel="noopener"
+        >
+          Explore in detail
+        </a>
+      </p>
       <div class="map-container">
         <iframe class="map-abroad" src="https://www.google.com/maps/d/u/0/embed?mid=1QwbJLPZxJFHC6lun0ZkGH7dgzHdnGT3m" height="480"></iframe>
       </div>
