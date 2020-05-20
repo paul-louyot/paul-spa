@@ -1,16 +1,9 @@
 <template>
   <Layout>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_donations" />
-      <input type="hidden" name="business" value="3G4AZADX3M4RQ" />
-      <input type="hidden" name="currency_code" value="EUR" />
-      <input class="btn-donate" type="image" src="https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-      <img alt="" border="0" src="https://www.paypal.com/en_FR/i/scr/pixel.gif" width="1" height="1" />
-    </form>
+    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
     <button
       style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-      class="btn-gift"
-      id="checkout-button-price_HJcrAmvC4ehVRc"
+      id="checkout-button-price_HJcwWJMJpHIfaB"
       role="link"
       v-on:click="stripeCheckout"
     >
@@ -18,6 +11,7 @@
     </button>
 
     <div id="error-message"></div>
+
   </Layout>
 </template>
 
@@ -33,11 +27,11 @@ export default {
   },
   methods: {
     stripeCheckout(){
-      var stripe = Stripe('pk_live_zyjRggYsW6IoKI4JFarJ7q6T00GDKX53dC');
+      var stripe = Stripe('pk_test_9W3GGjFHap69qzDUpaW8KzWS00quAVnesK');
       // When the customer clicks on the button, redirect
       // them to Checkout.
       stripe.redirectToCheckout({
-        lineItems: [{price: 'price_HJcrAmvC4ehVRc', quantity: 1}],
+        lineItems: [{price: 'price_HJcwWJMJpHIfaB', quantity: 1}],
         mode: 'payment',
         // Do not rely on the redirect to the successUrl for fulfilling
         // purchases, customers may not always reach the success_url after
@@ -61,11 +55,8 @@ export default {
 </script>
 
 <style>
-.btn-donate, .btn-gift {
+.btn-donate {
   margin: 0 auto;
   display: block;
-}
-.btn-gift {
-  margin-top: 40px;
 }
 </style>
