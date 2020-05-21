@@ -1,23 +1,28 @@
 <template>
   <Layout class="index-layout">
     <div>
-      <g-image class="my-picture" alt="Example image" src="~/mypicture.png" width="200" />
+      <g-image class="mx-auto" alt="Example image" src="~/mypicture.png" width="200" />
     </div>
-    <p>
-      <a href="/projects">
+    <div class="p-4">
+      <a href="/projects" class="btn btn-blue">
         Browse my projects
       </a>
-      </br>
-      <a href="/check-this-out">
-        Check this out
-      </a>
-      </br>
-      <a href="/donate">
-        Donate
-      </a>
-    </p>
+    </div>
+    <div class="p-4">
+    <a href="/check-this-out" class="btn btn-blue">
+      Check this out
+    </a>
+    </div>
+    <div class="p-4">
+    <a href="/donate" class="btn btn-blue">
+      Donate
+    </a>
+    </div>
     <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Built with Gridsome</a>
+      Built with
+      <a href="https://gridsome.org/" target="_blank" rel="noopener">Gridsome</a>
+      +
+      <a href="https://tailwindcss.com/" target="_blank" rel="noopener">Tailwind</a>
       <!-- <a href="https://github.com/paul-louyot/paul-louyot.github.io" target="_blank" rel="noopener">Repo</a> -->
     </p>
   </Layout>
@@ -37,10 +42,6 @@ export default {
   bottom: 0;
 }
 
-.home-links a {
-  margin-right: 1rem;
-}
-
 .index-layout {
   position: relative;
   background-color: #F1F1F1;
@@ -49,8 +50,14 @@ export default {
   min-height: -webkit-fill-available;
 }
 
-.my-picture {
-  margin: 0 auto 0;
-  display: block;
+.btn {
+  @apply font-bold py-2 px-4 rounded no-underline;
 }
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
+
 </style>
