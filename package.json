@@ -11,5 +11,8 @@
   "dependencies": {
     "gh-pages": "^2.2.0",
     "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "gridsome-plugin-tailwindcss": "^2.2.48"
   }
 }
