@@ -3,7 +3,7 @@
     <div>
       <g-image class="my-picture" alt="Example image" src="~/mypicture.png" width="200" />
     </div>
-    <p>
+    <p class="mx-auto bg-white">
       <a href="/projects">
         Browse my projects
       </a>
