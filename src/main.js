@@ -15,6 +15,11 @@ export default function (Vue, { router, head, isClient }) {
   })
 
   head.meta.push({
+    name: 'google-site-verification',
+    content: 'K4iVHQXlRNebUHiLRWZDO6WBHnPqkNmJJGzdrH4rOrc'
+  })
+
+  head.meta.push({
     name: 'description',
     content: 'Welcome to Paul Louyot\'s personal website'
   })
