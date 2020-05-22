@@ -27,6 +27,7 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
+  background-color: white;
 }
 
 .layout {
@@ -46,5 +47,15 @@ body {
 
 .nav__link {
   margin-left: 20px;
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded no-underline;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
 }
 </style>

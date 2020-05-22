@@ -3,20 +3,16 @@
     <div>
       <g-image class="mx-auto" alt="Example image" src="~/mypicture.png" width="200" />
     </div>
-    <div class="p-4">
-      <a href="/projects" class="btn btn-blue">
+    <div class="pt-4 ">
+      <a href="/projects" class="btn btn-blue block mx-auto hover:translate-y-1">
         Browse my projects
       </a>
-    </div>
-    <div class="p-4">
-    <a href="/check-this-out" class="btn btn-blue">
-      Check this out
-    </a>
-    </div>
-    <div class="p-4">
-    <a href="/donate" class="btn btn-blue">
-      Donate
-    </a>
+      <a href="/check-this-out" class="btn btn-blue block mx-auto mt-2">
+        Check this out
+      </a>
+      <a href="/donate" class="btn btn-blue block mx-auto mt-2">
+        Donate
+      </a>
     </div>
     <p class="home-links">
       Built with
@@ -44,20 +40,15 @@ export default {
 
 .index-layout {
   position: relative;
-  background-color: #F1F1F1;
   height: 100vh;
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
 
-.btn {
-  @apply font-bold py-2 px-4 rounded no-underline;
-}
-.btn-blue {
-  @apply bg-blue-500 text-white;
-}
-.btn-blue:hover {
-  @apply bg-blue-700;
-}
+</style>
 
+<style scoped>
+.btn {
+  width: fit-content;
+}
 </style>

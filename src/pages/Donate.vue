@@ -1,34 +1,42 @@
 <template>
   <Layout>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_donations" />
-      <input type="hidden" name="business" value="3G4AZADX3M4RQ" />
-      <input type="hidden" name="currency_code" value="EUR" />
-      <input class="btn-donate" type="image" src="https://www.paypalobjects.com/en_US/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-      <img alt="" border="0" src="https://www.paypal.com/en_FR/i/scr/pixel.gif" width="1" height="1" />
-    </form>
-    <button
-      style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-      class="btn-gift"
-      id="checkout-button-price_HJcrAmvC4ehVRc"
-      role="link"
-      v-on:click="stripeCheckout"
-    >
-      Buy me a gift
-    </button>
-
-    <div id="error-message"></div>
+    <div>
+      <form
+        action="https://www.paypal.com/cgi-bin/webscr"
+        method="post"
+        target="_top"
+        class="flex"
+      >
+        <input type="hidden" name="cmd" value="_donations" />
+        <input type="hidden" name="business" value="3G4AZADX3M4RQ" />
+        <input type="hidden" name="currency_code" value="EUR" />
+        <button class="btn btn-blue mx-auto" title="Donate via PayPal">
+          Donate via Paypal
+        </button>
+      </form>
+      <button
+        class="btn btn-blue block mx-auto mt-4"
+        title="Donate via PayPal"
+        id="checkout-button-price_HJcrAmvC4ehVRc"
+        role="link"
+        v-on:click="stripeCheckout"
+      >
+        Buy me a gift
+      </button>
+      <!-- style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em" -->
+      <div id="error-message"></div>
+    </div>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Projects'
+    title: 'Donate'
   },
   mounted(){
     let stripeScript = document.createElement('script')
-    stripeScript.setAttribute('src', 'https://js.stripe.com/v3')
+    stripeScript.setAttribute('src', 'https://js.stripe.com/v3') // add via package?
     document.head.appendChild(stripeScript)
   },
   methods: {
@@ -40,10 +48,7 @@ export default {
         lineItems: [{price: 'price_HJcrAmvC4ehVRc', quantity: 1}],
         mode: 'payment',
         // Do not rely on the redirect to the successUrl for fulfilling
-        // purchases, customers may not always reach the success_url after
-        // a successful payment.
-        // Instead use one of the strategies described in
-        // https://stripe.com/docs/payments/checkout/fulfillment
+        // purchases, https://stripe.com/docs/payments/checkout/fulfillment
         successUrl: 'https://paul-louyot.github.io/success',
         cancelUrl: 'https://paul-louyot.github.io/canceled',
       })
@@ -61,11 +66,4 @@ export default {
 </script>
 
 <style>
-.btn-donate, .btn-gift {
-  margin: 0 auto;
-  display: block;
-}
-.btn-gift {
-  margin-top: 40px;
-}
 </style>
