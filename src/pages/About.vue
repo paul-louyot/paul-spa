@@ -10,12 +10,19 @@
           Explore in detail
         </a>
       </p>
-      <div class="map-container">
-        <!-- <iframe --> 
-          <!-- class="map-abroad" --> 
-          <!-- src="https://www.google.com/maps/d/u/0/embed?mid=1QwbJLPZxJFHC6lun0ZkGH7dgzHdnGT3m" --> 
-          <!-- height="480" -->
-        <!-- /> -->
+      <div class="px-4">
+        <div class="map-container relative mx-auto">
+          <g-image
+            src="~/spinner.gif"
+            width="300"
+            class="absolute"
+          />
+          <iframe
+            class="map-abroad absolute z-10"
+            src="https://www.google.com/maps/d/u/0/embed?mid=1QwbJLPZxJFHC6lun0ZkGH7dgzHdnGT3m"
+            height="480"
+          />
+        </div>
       </div>
     <h1>Find me here</h1>
     <ul>
@@ -59,15 +66,14 @@ export default {
 
 <style scoped>
 .map-abroad {
+  display: block;
   width: 100%;
   height: 100%;
-  max-width: 640px;
-  display: block;
   margin: 0 auto;
 }
 
 .map-container {
-  padding: 0 15px;
   height: 480px;
+  max-width: 640px;
 }
 </style>
