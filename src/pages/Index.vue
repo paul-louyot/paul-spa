@@ -1,5 +1,5 @@
 <template>
-  <Layout class="index-layout sm:h-screen">
+  <Layout class="index-layout ">
     <div>
       <g-image class="mx-auto" alt="Example image" src="~/mypicture.png" width="200" />
     </div>
@@ -28,14 +28,25 @@ export default {
 }
 </script>
 
-<style>
-.index-layout {
-  min-height: 570px;
-}
-</style>
-
 <style scoped>
 .btn {
   width: fit-content;
 }
+</style >
+
+<style >
+body{
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+@media screen and (min-width: 320px) and (min-height: 568px){
+  body {
+    min-height: 100vh;
+  }
+}
+
 </style>
