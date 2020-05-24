@@ -3,7 +3,7 @@
     <div>
       <g-image class="mx-auto" alt="Example image" src="~/mypicture.png" width="200" />
     </div>
-    <div class="text-center text-xl mt-6 text-pink-400 font-semibold">
+    <div class="text-center text-xl mt-6 text-blue-400 font-semibold">
       Welcome to Paul's website
     </div>
     <div class="pt-4 ">

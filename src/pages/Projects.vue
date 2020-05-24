@@ -21,7 +21,7 @@
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Personal wiki</div>
         <p class="text-gray-700 text-base">
-          This is my personal wiki.
+          A personal wiki to share what I learn.
         </p>
         <a
           href="https://paul-louyot.gitbook.io/wiki/"

@@ -14,8 +14,7 @@
         <div class="map-container relative mx-auto">
           <g-image
             src="~/spinner.gif"
-            width="300"
-            class="absolute"
+            class="absolute loader w-20"
           />
           <iframe
             class="map-abroad absolute z-10"
@@ -75,5 +74,15 @@ export default {
 .map-container {
   height: 480px;
   max-width: 640px;
+}
+
+.loader{
+  left: calc(50% - 2.5rem)
+}
+
+@media screen and (min-height: 600px){
+  .loader{
+    top: calc(50% - 2.5rem)
+  }
 }
 </style>
