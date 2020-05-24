@@ -1,10 +1,13 @@
 <template>
-  <Layout class="index-layout">
+  <Layout class="index-layout sm:h-screen">
     <div>
       <g-image class="mx-auto" alt="Example image" src="~/mypicture.png" width="200" />
     </div>
+    <div class="text-center text-xl mt-6 text-blue-400 font-semibold">
+      Welcome to Paul's website
+    </div>
     <div class="pt-4 ">
-      <a href="/projects" class="btn btn-blue block mx-auto hover:translate-y-1">
+      <a href="/projects" class="btn btn-blue block mx-auto">
         Browse my projects
       </a>
       <a href="/check-this-out" class="btn btn-blue block mx-auto mt-2">
@@ -14,13 +17,6 @@
         Donate
       </a>
     </div>
-    <p class="home-links">
-      Built with
-      <a href="https://gridsome.org/" target="_blank" rel="noopener">Gridsome</a>
-      +
-      <a href="https://tailwindcss.com/" target="_blank" rel="noopener">Tailwind</a>
-      <!-- <a href="https://github.com/paul-louyot/paul-louyot.github.io" target="_blank" rel="noopener">Repo</a> -->
-    </p>
   </Layout>
 </template>
 
@@ -33,18 +29,9 @@ export default {
 </script>
 
 <style>
-.home-links {
-  position: absolute;
-  bottom: 0;
-}
-
 .index-layout {
-  position: relative;
-  height: 100vh;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  min-height: 570px;
 }
-
 </style>
 
 <style scoped>
